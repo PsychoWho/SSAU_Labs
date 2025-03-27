@@ -1,0 +1,108 @@
+﻿  ASM_LR_2.cpp
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(15,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(28,5): error C4235: использовано нестандартное расширение: ключевое слово "__asm" данной архитектурой не поддерживается
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(29,9): error C2065: mov: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(29,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "eax"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(29,13): error C2065: eax: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(29,25): error C2065: EAX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(30,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "mov"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(30,9): error C2065: mov: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(30,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ebx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(30,13): error C2065: ebx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(30,25): error C2065: EBX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(31,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "mov"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(31,9): error C2065: mov: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(31,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ecx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(31,13): error C2065: ecx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(31,25): error C2065: ECX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(33,11): error C2065: Вычисляем: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(33,30): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "знаменатель"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(34,11): error C2065: Вычисляем: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(34,30): error C2143: синтаксическая ошибка: отсутствие ";" перед "константа"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(35,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "mov"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(34,32): warning C4552: "*": результат выражения не используется
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(35,9): error C2065: mov: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(35,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "edx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(35,13): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(35,26): error C2065: EDX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "imul"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,9): error C2065: imul: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,14): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "edx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,14): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,19): error C2065: eax: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(36,26): error C2065: EDX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "jo"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,9): error C2065: jo: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "overflow"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,12): error C2065: overflow: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,26): error C2065: Проверка: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,43): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "на"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,43): error C2065: на: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,48): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "переполнение"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(37,48): error C2065: переполнение: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(39,11): error C2065: Вычисляем: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(39,30): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "b"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "add"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(39,32): warning C4552: "+": результат выражения не используется
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,9): error C2065: add: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ebx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,13): error C2065: ebx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,18): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(40,29): error C2065: EBX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "jo"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,9): error C2065: jo: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "overflow"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,12): error C2065: overflow: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,29): error C2065: Проверка: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,46): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "на"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,46): error C2065: на: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,51): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "переполнение"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(41,51): error C2065: переполнение: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(43,11): error C2065: Вычисляем: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(43,30): error C2143: синтаксическая ошибка: отсутствие ";" перед "константа"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(44,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "mov"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(43,33): warning C4552: "*": результат выражения не используется
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(44,9): error C2065: mov: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(44,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "edx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(44,13): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(44,25): error C2065: EDX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "imul"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,9): error C2065: imul: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,14): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "edx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,14): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,19): error C2065: ecx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(45,25): error C2065: EDX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "jo"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,9): error C2065: jo: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "overflow"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,12): error C2065: overflow: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,25): error C2065: Проверка: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,42): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "на"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,42): error C2065: на: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,47): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "переполнение"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(46,47): error C2065: переполнение: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(48,11): error C2065: Вычисляем: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(48,30): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "знаменатель"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "sub"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,9): error C2065: sub: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,13): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ebx"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,13): error C2065: ebx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,18): error C2065: edx: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(49,25): error C2065: EBX: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "jo"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,9): error C2065: jo: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "overflow"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,12): error C2065: overflow: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,25): error C2065: Проверка: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,42): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "на"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,42): error C2065: на: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,47): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "переполнение"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(50,47): error C2065: переполнение: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,11): error C2065: Проверка: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,28): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "деления"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,28): error C2065: деления: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,43): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "на"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,43): error C2065: на: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,48): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "ноль"
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,48): error C2065: ноль: необъявленный идентификатор
+C:\Users\Nikit\source\repos\ASM_LR_2\ASM_LR_2\ASM_LR_2.cpp(52,48): error C1003: число ошибок превышает 100; остановка компиляции
