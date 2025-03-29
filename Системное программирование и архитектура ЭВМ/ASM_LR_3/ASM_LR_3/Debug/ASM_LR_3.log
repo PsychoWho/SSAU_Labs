@@ -1,4 +1,0 @@
-﻿  ASM_LR_3.cpp
-C:\Users\Nikit\source\repos\ASM_LR_3\ASM_LR_3\ASM_LR_3.cpp(14,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-C:\Users\Nikit\source\repos\ASM_LR_3\ASM_LR_3\ASM_LR_3.cpp(114,1): warning C4717: main: рекурсия на всех путях выполнения, функция вызовет переполнение стека
-  ASM_LR_3.vcxproj -> C:\Users\Nikit\source\repos\ASM_LR_3\Debug\ASM_LR_3.exe
