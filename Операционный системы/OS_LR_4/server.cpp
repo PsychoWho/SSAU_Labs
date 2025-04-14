@@ -61,7 +61,6 @@ vector<string> tokenize(const string& expr) {
 	vector<string> tokens;
 	string current;
 	for (char c : expr) {
-		if (isspace(c)) continue;
 		if (isOperation(c)) {
 			if (!current.empty()) {
 				tokens.push_back(current);
@@ -130,12 +129,12 @@ int main() {
 	char buffer[BUFSIZE];
 	DWORD dwRead, dwWritten;
 	bool fSuccess;
-	bool connect;
+	bool connect = false;
 	string expression;
 
 	hPipe = CreateNamedPipe(
 		TEXT("\\\\.\\pipe\\mynamedpipe"),
-		PIPE_ACCESS_DUPLEX | FILE_FLAG_OVERLAPPED,
+		PIPE_ACCESS_DUPLEX,
 		PIPE_TYPE_MESSAGE | PIPE_READMODE_MESSAGE | PIPE_WAIT,
 		INSTANCES,
 		BUFSIZE * 4,
@@ -184,7 +183,6 @@ int main() {
 		cout << "Получено от клиента: " << input << endl;
 
 		if (input == "calc") {
-			
 			string answ = isValid(expression) ? evaluateExpression(expression) : "!есть деление на 0!";
 
 			fSuccess = WriteFile(
