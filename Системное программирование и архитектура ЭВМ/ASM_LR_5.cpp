@@ -36,14 +36,13 @@ void main()
         fnstsw ax               ; сохраняем статус
         sahf                    ; загружаем стутус в EFLAGS
         jz division_by_zero     ; если а == 0
-        fstp st(0)
 
         ; Вычисление(c / a - 2 * b)
         fld  qword ptr[c]       ; st(0) = c
         fdiv qword ptr[a]       ; st(0) = c / a
         fld  qword ptr[b]       ; st(0) = b, st(1) = c / a
         fmul qword ptr[с2]      ; st(0) = 2 * b
-        fsubp st(1), st(0)      ; st(0) = c / a - 2 * b
+        fsubp st(1), st         ; st(0) = c / a - 2 * b
 
         ; Вычисление(b + 4 * a - 10 * c)
         fld  qword ptr[a]       ; st(0) = a, st(1) = (c / a - 2 * b)
@@ -51,7 +50,7 @@ void main()
         fadd qword ptr[b]       ; st(0) = b + 4 * a
         fld  qword ptr[c]       ; st(0) = c, st(1) = b + 4 * a, st(2) = (c / a - 2 * b)
         fmul qword ptr[с10]     ; st(0) = 10 * c
-        fsubp st(1), st(0)      ; st(0) = b + 4 * a - 10 * c
+        fsubp st(1), st         ; st(0) = b + 4 * a - 10 * c
 
         ; Проверка(знаменатель == 0)
         fldz                    ; st(0) = 0, st(1) = (b + 4 * a - 10 * c)
