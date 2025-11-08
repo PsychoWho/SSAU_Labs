@@ -170,7 +170,7 @@ void gradientDescent2D(Point start, double e, int max_iter_gd) {
         old = p;
 
         Point gr = grad(p, 0.1);
-        p = old - gr*0.0001;
+        p = old - gr*0.01;
 
         if (iter_gd >= max_iter_gd) {
             cout << "\nПревышен предел итераций метода! (" << max_iter_gd << ")";
