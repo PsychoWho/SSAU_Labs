@@ -52,10 +52,14 @@ double norm(Point& a, Point& b) {
     return sqrt(x * x + y * y);
 }
 
-//функция (с минимумом в (1,3))
+
 double fun(Point p) {
     iter++;
+    //функция (с минимумом в (1,3))
     return pow(p.x + 2 * p.y - 7, 2) + pow(2 * p.x + p.y - 5, 2);
+    
+    // Минимум в (2, -1), значение 0
+    //return pow(p.x - 2, 2) + pow(p.y + 1, 2);
 }
 
 Point grad(Point p, double h) {
@@ -151,6 +155,7 @@ void coordinatDescent2D(Point start, double e, double r, int max_iter_cd) {
 
     } while (norm(old, p) > e);
 
+    cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
     cout << "\nПокоординатный спуск:   " << p;
     cout << "\nКол-во вызовов функции: " << iter;
     cout << "\nКол-во итераций метода: " << iter_cd;
@@ -179,9 +184,47 @@ void gradientDescent2D(Point start, double e, int max_iter_gd) {
 
     } while (norm(old, p) > e);
 
-    cout << "\nНачальная точка:      " << start;
+    cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
     cout << "\nГрадиентный спуск:    " << p;
     cout << "\nКол-во итераций м-да: " << iter_gd;
+    cout << "\n\nF" << p << " = " << fun(p) << endl;
+}
+
+void conjugateGradient2D(Point start, double e, int max_iter_сg) {
+    int iter_cg = 1;
+
+    Point p = start;
+    Point old;
+    Point old_gr;
+    
+    Point gr = grad(p, 0.1);
+    Point s = gr * (-1.0);
+
+    do
+    {
+        iter_cg++;
+
+        old = p;
+        old_gr = gr;
+
+        p = old + s * 0.01;
+
+        gr = grad(p, 0.1);
+
+        double w = pow(gr.norm(), 2) / pow(old_gr.norm(), 2);
+        
+        s = gr * (-0.1) + s * w;
+
+        if (iter_cg >= max_iter_сg) {
+            cout << "\nПревышен предел итераций метода! (" << max_iter_сg << ")";
+            break;
+        }
+
+    } while (norm(old, p) > e);
+
+    cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
+    cout << "\nСопряжённый градиент: " << p;
+    cout << "\nКол-во итераций м-да: " << iter_cg;
     cout << "\n\nF" << p << " = " << fun(p) << endl;
 }
 
@@ -195,8 +238,11 @@ int main()
     int max_iter = 100000;
     double r = 2;
 
-    cout << "Точность: " << e << endl;
+    cout << "Точность:        " << e << endl;
+    cout << "Начальная точка: " << A << endl;
     coordinatDescent2D(A, e, r, max_iter);
     gradientDescent2D(A, e, max_iter);
+    conjugateGradient2D(A, e, max_iter);
+    cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
 
 }
