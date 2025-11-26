@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <functional>
 
 using namespace std;
 
@@ -57,9 +58,6 @@ double fun(Point p) {
     iter++;
     //функция (с минимумом в (1,3))
     return pow(p.x + 2 * p.y - 7, 2) + pow(2 * p.x + p.y - 5, 2);
-    
-    // Минимум в (2, -1), значение 0
-    //return pow(p.x - 2, 2) + pow(p.y + 1, 2);
 }
 
 Point grad(Point p, double h) {
@@ -73,6 +71,14 @@ Point grad(Point p) {
     double dy = 4 * (p.x + 2 * p.y - 7) + 2 * (2 * p.x + p.y - 5);
     return Point{ dx,dy };
 }
+
+double defH() {
+    double dxx = 10;
+    double dyy = 10;
+    double dxy = 8;
+    return dxx * dyy - dxy * dxy;
+}
+
 
 //двумерный метод золотого сечения
 Point golden2D(Point A, Point B, double e) {
@@ -167,6 +173,7 @@ void gradientDescent2D(Point start, double e, int max_iter_gd) {
 
     Point p = start;
     Point old;
+    Point gr;
 
     do
     {
@@ -174,7 +181,7 @@ void gradientDescent2D(Point start, double e, int max_iter_gd) {
 
         old = p;
 
-        Point gr = grad(p, 0.1);
+        gr = grad(p);
         p = old - gr*0.01;
 
         if (iter_gd >= max_iter_gd) {
@@ -197,8 +204,10 @@ void conjugateGradient2D(Point start, double e, int max_iter_сg) {
     Point old;
     Point old_gr;
     
-    Point gr = grad(p, 0.1);
+    Point gr = grad(p);
     Point s = gr * (-1.0);
+
+    double alpha = 0.5;
 
     do
     {
@@ -209,11 +218,11 @@ void conjugateGradient2D(Point start, double e, int max_iter_сg) {
 
         p = old + s * 0.01;
 
-        gr = grad(p, 0.1);
+        gr = grad(p);
 
         double w = pow(gr.norm(), 2) / pow(old_gr.norm(), 2);
         
-        s = gr * (-0.1) + s * w;
+        s = gr * (-1.0) + s * w;
 
         if (iter_cg >= max_iter_сg) {
             cout << "\nПревышен предел итераций метода! (" << max_iter_сg << ")";
@@ -229,13 +238,88 @@ void conjugateGradient2D(Point start, double e, int max_iter_сg) {
 }
 
 
+double alpha_golden(double alpha, double s, double e, function<double(double)> f) {
+    double l = f(alpha - e);
+    double r = f(alpha + e);
+    double a = alpha;
+    double b = alpha;
+    if (r > l) {
+        a -= s;
+    }
+    else {
+        b += s;
+    }
+
+    double gold = 0.382;
+    double xleft = a + gold * (b - a);
+    double xright = b - gold * (b - a);
+    double fl = f(xleft);
+    double fr = f(xright);
+
+    while (abs(b - a) > e) {
+        if (fl < fr) {
+            b = xright;
+            xright = xleft;
+            fr = fl;
+            xleft = a + gold * (b - a);
+            fl = f(xleft);
+        }
+        else
+        {
+            a = xleft;
+            xleft = xright;
+            fl = fr;
+            xright = b - gold * (b - a);
+            fr = f(xright);
+        }
+    }
+    return (a + b) / 2;
+}
+
+
+void newtonRaphson(Point start, double e, int max_iter_nr) {
+    int iter_nr = 0;
+
+    Point p = start;
+    Point old;
+    Point gr;
+    double alpha;
+    double def_hess = defH();
+
+    do
+    {
+        iter_nr++;
+        old = p;
+        gr = grad(p);
+
+        auto alpha_fun = [&](double alpha) {
+            return fun(old - gr * alpha / def_hess);
+        };
+        
+        alpha = alpha_golden(0, 100, e, alpha_fun);
+
+        p = old - gr / def_hess * alpha;
+
+        if (iter_nr >= max_iter_nr) {
+            cout << "\nПревышен предел итераций метода! (" << max_iter_nr << ")";
+            break;
+        }
+
+    } while (norm(old, p) > e);
+
+    cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
+    cout << "\nМетод Ньютона Рафсона: " << p;
+    cout << "\nКол-во итераций м-да:  " << iter_nr;
+    cout << "\n\nF" << p << " = " << fun(p) << endl;
+}
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
     Point A = { 2, 4};
     double e = 1e-6;
-    int max_iter = 100000;
+    int max_iter = 10000;
     double r = 2;
 
     cout << "Точность:        " << e << endl;
@@ -243,6 +327,7 @@ int main()
     coordinatDescent2D(A, e, r, max_iter);
     gradientDescent2D(A, e, max_iter);
     conjugateGradient2D(A, e, max_iter);
+    newtonRaphson(A, e, max_iter);
     cout << "\n=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=\n";
 
 }
